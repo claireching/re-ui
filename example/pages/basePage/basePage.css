@@ -1,0 +1,27 @@
+.base-page {
+    position: relative;
+}
+
+.page-title {
+    font-size: 1.3em;
+    padding: 0 20px;
+    height: 48px;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+
+.base-page-content {
+    /*padding: 20px;*/
+    /*border-top: 1px solid #ddd;*/
+}
+
+.base-page-buttons {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.base-page-buttons > button {
+    margin-right: 7px;
+}

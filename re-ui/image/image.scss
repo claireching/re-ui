@@ -1,0 +1,11 @@
+@import "../variables/var";
+
+.image-container {
+    background-color: $color-bg-placeholder;
+
+    img {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+}

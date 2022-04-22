@@ -1,0 +1,14 @@
+.top-bar {
+    text-align: right;
+    padding: 0 10px;
+    background: #2e3544;
+}
+
+.top-bar a {
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 5px;
+    color: #fff
+}

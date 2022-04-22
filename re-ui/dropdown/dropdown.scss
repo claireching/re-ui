@@ -1,0 +1,15 @@
+@import "../variables/var";
+
+.dropdown-container {
+    position: relative;
+
+    &.isHover {
+        display: inline-block;
+    }
+
+    ._body {
+        position: absolute;
+        z-index: 15;
+        border: 1px solid $color-border
+    }
+}

@@ -1,0 +1,141 @@
+.main-content-wrap {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 14em);
+    min-height: 100vh;
+}
+
+.side-bar {
+    width: 14em;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 1010;
+    margin: 0;
+    height: 100%;
+    background: #2a3140;
+}
+
+.side-bar-head {
+    white-space: nowrap;
+    padding: 6px 5px;
+    color: #fff;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+}
+
+.sidebar-menu {
+    color: #fff;
+}
+
+.sidebar-menu a {
+    cursor: pointer
+}
+
+.side-bar-logo {
+    display: none;
+}
+
+.sidebar-menu a, .nav-title-toggle {
+    border-bottom: 1px solid #3a3a3a;
+    display: block;
+    padding: 15px;
+    color: #fff;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.nav-title-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title-toggle:hover {
+    cursor: pointer;
+}
+
+.nav-title-toggle .iconfont.icon-caret-up,
+.nav-title-toggle .iconfont.icon-caret-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+    transition: transform .3s;
+}
+.nav-title-toggle .iconfont.icon-caret-down {
+    transform: rotate(180deg);
+}
+
+.nav-active {
+    background: #011945;
+}
+
+.nav-active a, .nav-active .nav-title-toggle {
+    border-color: #011945;
+}
+
+.nav-group a {
+    padding: 10px 15px;
+}
+
+.icon-hamburger {
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.collapsed .side-bar {
+    width: 60px;
+    overflow-y: auto;
+}
+
+.collapsed .side-bar::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+    background: transparent;
+}
+
+.collapsed .main-content-wrap {
+    width: calc(100% - 60px);
+}
+
+.collapsed .side-bar .side-bar-title-logo, .collapsed .side-bar .side-bar-nav-name {
+    display: none;
+}
+
+.collapsed .side-bar-logo {
+    display: block
+}
+
+.collapsed .side-bar .side-bar-nav-name {
+    position: absolute;
+    background: #011945;
+    padding: 5px 15px 5px 0;
+    height: 100%;
+    top: 0;
+    left: 100%;
+}
+
+.collapsed .sidebar-menu a, .collapsed .nav-title-toggle {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.collapsed .sidebar-menu a:hover > .side-bar-nav-name, .collapsed .nav-title-toggle:hover span > .side-bar-nav-name {
+    display: flex;
+    align-items: center;
+}
+
+.collapsed .side-bar-head {
+    display: block;
+    text-align: center;
+}
+
+.nav-active .side-bar-nav-name {
+    background: #011945 !important;
+}

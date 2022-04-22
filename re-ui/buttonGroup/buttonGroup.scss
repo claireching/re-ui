@@ -1,0 +1,9 @@
+.btn-group {
+    button {
+        margin-left: 5px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
