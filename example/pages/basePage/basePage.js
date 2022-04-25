@@ -1,6 +1,7 @@
 import "./basePage.css";
 import React from "react";
 import Check from "../../components/checkif";
+import {Container} from "../../../re-ui";
 
 const BasePage2 = (props) => {
     const {isLoading, title, className = ""} = props;
@@ -8,7 +9,10 @@ const BasePage2 = (props) => {
     return (
         <div className={`base-page ${className}`}>
             <Check if={title}>
-                <h1 className="page-title">{title}</h1>
+                <Container>
+                    <h1 className="page-title">{title}</h1>
+                </Container>
+
             </Check>
             {props.children}
         </div>

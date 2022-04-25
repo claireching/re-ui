@@ -10,6 +10,17 @@
     ._body {
         position: absolute;
         z-index: 15;
-        border: 1px solid $color-border
+        border: 1px solid $color-border;
+        margin-top: 1px;
+        background: #fff;
     }
 }
+
+.toggle-container {
+    cursor: text;
+
+    &._active {
+        outline: -webkit-focus-ring-color auto 1px;
+    }
+}
+

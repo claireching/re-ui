@@ -13,7 +13,7 @@ const DropdownPage = () => {
                 <p>Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for
                     multiple sizes, states, and more.</p>
 
-                <Dropdown label={"Click Me"}>
+                <Dropdown toggle={"Click Me"}>
                     <Container background={"#fff"}>
                         <Row>
                             <Col>

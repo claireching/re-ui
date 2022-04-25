@@ -25,11 +25,15 @@ $color-bg: #6c757d;
 $color-bg-placeholder: #eff2f5;
 
 // Grid
-$grid-padding: .75rem;
+$container-padding: 2rem;
+$grid-padding: 0.5rem;
 
 // Font Size
 $fontSize-root: 14px;
 $fontSize-h1: 1.2rem;
 
 // Margin & Padding
-$margin-md: 2rem;
+$margin-md: 1rem;
+$padding-section: 2rem;
+$padding-input-vertical-md: 0.7rem;
+$padding-btn-vertical-md: 0.6rem;

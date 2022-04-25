@@ -1,0 +1,80 @@
+@import "../variables/var";
+
+.table-container {
+    border-collapse: collapse;
+    min-width: 100%;
+    width: 100%;
+    border-style: solid;
+    border-color: $color-border;
+    border-width: 0 1px 1px 1px;
+
+    td, th {
+        border-top: 0.0625rem solid $color-border;
+        padding: 0.9em 1rem;
+        text-align: left;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    th {
+
+    }
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0 40px;
+
+    .pagination {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+
+        .page {
+            display: inline-flex;
+            min-width: 32px;
+            height: 32px;
+            margin-right: 4px;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            border-radius: 8px;
+            outline: 0;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 600;
+            color: rgb(23, 25, 36);
+
+            &.active {
+                background-color: $color-primary;
+                color: #fff;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .previous, .next {
+            font-size: 1.1em;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+
+        .previous {
+            margin-right: 8px;
+        }
+    }
+
+    .limit-container {
+        display: flex;
+        align-items: center;
+    }
+}
+

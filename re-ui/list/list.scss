@@ -1,17 +1,25 @@
+@import "../variables/var";
+
 .list-container {
     display: flex;
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
     border-radius: 0.25rem;
+    border: 1px solid $color-border;
+    overflow: hidden;
 
-    ._item {
+    .list-item-container {
         position: relative;
         display: block;
         padding: 0.5rem 1rem;
         color: #212529;
         text-decoration: none;
         background-color: #fff;
-        border: 1px solid rgba(0,0,0,.125);
+        border-bottom: 1px solid $color-border;
+
+        &:last-child {
+            border-bottom: 0;
+        }
     }
 }

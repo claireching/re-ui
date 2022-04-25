@@ -2,3 +2,7 @@ html, body, #root {
     height: 100%;
     font-size: 14px;
 }
+
+p {
+    color: #58667e
+}
