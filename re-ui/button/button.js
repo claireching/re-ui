@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import {getBtnColorClassName} from "../utils";
 
 
-const Button = forwardRef(({children, onClick, onMouseEnter, onMouseLeave, color = "primary"}, ref) => {
+const Button = forwardRef(({children, onClick, onMouseEnter, onMouseLeave, color = "primary", outline}, ref) => {
     const handleClick = (e) => {
         typeof onClick === "function" && onClick(e);
     };
@@ -19,7 +19,7 @@ const Button = forwardRef(({children, onClick, onMouseEnter, onMouseLeave, color
     };
 
     return (
-        <button className={clsx("btn", getBtnColorClassName(color))}
+        <button className={clsx("btn", getBtnColorClassName(color), outline && "outline")}
                 ref={ref}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}

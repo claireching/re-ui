@@ -16,19 +16,19 @@ const Table = ({children, className, style, alt}) => {
                 </div>
                 <div>
                     <ul className="pagination">
-                        <li className="previous disabled">{"<"}</li>
+                        <li className="previous disabled">prev</li>
                         <li className="page active">1</li>
                         <li className="page">2</li>
                         <li className="page">3</li>
                         <li className="page">4</li>
                         <li className="page">5</li>
                         <li className="page">6</li>
-                        <li className="next">{">"}</li>
+                        <li className="next">next</li>
                     </ul>
                 </div>
                 <div className={"limit-container"}>
                     <span style={{marginRight: 5}}>Limit</span>
-                    <Select options={[{label: "50",}, {label: "100", value: "100"}]} defaultSelected={"100"}/>
+                    <Select options={[{label: "50",}, {label: "100", value: "100"}]} defaultSelected={"100"} dropdownPosition={"top"}/>
                 </div>
 
             </div>

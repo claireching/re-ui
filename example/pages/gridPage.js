@@ -18,7 +18,7 @@ const GridPage = () => {
                                     twelve column system, six default responsive tiers.</p>
 
                                 <Row withMargin>
-                                    <Col md={3}>
+                                    <Col md={4}>
                                         <Image
                                             src={"https://cdn.cloudflare.steamstatic.com/steam/apps/292030/ss_107600c1337accc09104f7a8aa7f275f23cad096.600x338.jpg?t=1646996408"}/>
                                         <p>Use Bootstrap’s custom button styles for actions in forms, dialogs, and more
@@ -27,7 +27,7 @@ const GridPage = () => {
                                             for multiple sizes, states, and more.</p>
                                         <Button>View</Button>
                                     </Col>
-                                    <Col md={3}>
+                                    <Col md={4}>
                                         <Image
                                             src={"https://cdn.cloudflare.steamstatic.com/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.600x338.jpg?t=1646996408"}/>
                                         <p>Use Bootstrap’s custom button styles for actions in forms, dialogs, and more
@@ -36,7 +36,7 @@ const GridPage = () => {
                                             for multiple sizes, states, and more.</p>
                                         <Button>View</Button>
                                     </Col>
-                                    <Col md={3}>
+                                    <Col md={4}>
                                         <Image
                                             src={"https://cdn.cloudflare.steamstatic.com/steam/apps/292030/ss_90a33d7764a2d23306091bfcb52265c3506b4fdb.600x338.jpg?t=1646996408"}/>
                                         <p>Use Bootstrap’s custom button styles for actions in forms, dialogs, and more

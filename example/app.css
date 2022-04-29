@@ -6,3 +6,11 @@ html, body, #root {
 p {
     color: #58667e
 }
+
+.table-filter .col {
+    margin-bottom: 10px;
+}
+
+.i-mar {
+    margin-right: 5px;
+}

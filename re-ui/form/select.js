@@ -1,21 +1,42 @@
 import React, {useEffect, useRef, useState} from "react";
 import Dropdown from "../dropdown/dropdown";
+import clsx from "clsx";
+import "./select.scss";
 
-const Select = ({options = [], label, id, name, onChange, value = "", defaultSelected}) => {
+const DEFAULT_LABEL = "Please Select";
+const Select = ({
+                    options = [],
+                    label,
+                    id,
+                    name,
+                    onChange,
+                    value = "",
+                    defaultSelected,
+                    dropdownPosition,
+                    showDefault = true
+                }) => {
     const [toggleWidth, setToggleWidth] = useState();
     const [selected, setSelected] = useState();
+    const [isOpen, setIsOpen] = useState(false);
     const toggleRef = useRef(null);
+    const containerRef = useRef(null);
+
 
     useEffect(() => {
-        const toggleDom = toggleRef.current.getBoundingClientRect();
-        setToggleWidth(toggleDom.width);
-        if (defaultSelected) {
-            const option = options?.find(d => d.value === defaultSelected);
-            setSelected(option || defaultSelected);
-        } else {
-            setSelected({label: "Please Select"});
+        if (options?.length) {
+            const toggleWidth1 = _getToggleWidth(options);
+            setToggleWidth(toggleWidth1);
+            // if (!toggleWidth || (toggleDomWidth > toggleWidth)) {
+            //     setToggleWidth(toggleDomWidth);
+            // }
+            if (defaultSelected) {
+                const option = options?.find(d => d.value === defaultSelected);
+                setSelected(option || defaultSelected);
+            } else {
+                setSelected({label: DEFAULT_LABEL});
+            }
         }
-    }, []);
+    }, [options]);
 
     if (!id) {
         id = `select${JSON.stringify(options)}`;
@@ -27,16 +48,24 @@ const Select = ({options = [], label, id, name, onChange, value = "", defaultSel
         if (typeof onChange === "function") {
             onChange(value, name);
         }
+        setIsOpen(false);
     };
 
-    const toggleInput = <div className={"_input select-input"}
-                             style={{minWidth: toggleWidth}}
+    const containerDom = containerRef?.current?.getBoundingClientRect();
+    const containerDomWidth = containerDom?.width;
+    const bodyWidth = containerDomWidth > toggleWidth ? containerDomWidth : toggleWidth;
+
+    const toggleInput = <div className={clsx("_toggle _input select-input", isOpen && "_active")}
                              ref={toggleRef}>{selected?.label}</div>;
     return (
-        <div className={"form-container select-container"}>
+        <div className={"form-container select-container"} ref={containerRef}>
             {label && <label htmlFor={id}>{label}</label>}
-            <Dropdown toggle={toggleInput}>
-                <div className={"_options"} style={{minWidth: toggleWidth}}>
+            <Dropdown toggle={toggleInput} isOpen={isOpen} onToggle={setIsOpen} dropdownPosition={dropdownPosition}>
+                <div className={"_options"} style={{width: bodyWidth}}>
+                    {showDefault &&
+                    <div className={"_item"} onClick={() => handleChange({label: DEFAULT_LABEL, value: null})}>
+                        {DEFAULT_LABEL}
+                    </div>}
                     {options?.map(d => {
                         const value = d?.value || d?.label;
                         return <div className={"_item"}
@@ -54,6 +83,12 @@ const Select = ({options = [], label, id, name, onChange, value = "", defaultSel
             {/*</select>*/}
         </div>
     );
+};
+
+const _getToggleWidth = (options) => {
+    const longestLabel = options?.reduce((a, b) => a?.label?.length > b?.label?.length ? a : b);
+    const strLength = longestLabel?.length > DEFAULT_LABEL?.length ? longestLabel?.length : DEFAULT_LABEL?.length;
+    return strLength * 10;
 };
 
 export default Select;

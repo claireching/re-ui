@@ -1,0 +1,8 @@
+@import "../variables/var";
+
+.navbar-container {
+    display: flex;
+    border-bottom: 1px solid $color-border;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}

@@ -9,26 +9,31 @@ const routes = [
     {
         path: "/",
         name: "Home",
+        icon: "icon-shouye",
         component: <HomePage/>
     },
     {
         path: "/button",
         name: "Button",
+        icon: "icon-fuzhi",
         component: <ButtonPage/>
     },
     {
         path: "/dropdown",
         name: "Dropdown",
+        icon: "icon-fuzhi",
         component: <DropdownPage/>
     },
     {
         path: "/modal",
         name: "Modal",
+        icon: "icon-fuzhi",
         component: <ModalPage/>
     },
     {
         path: "/grid",
         name: "Grid",
+        icon: "icon-fuzhi",
         component: <GridPage/>
     },
     // {

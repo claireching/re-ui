@@ -49,6 +49,7 @@ const SideBarMenu = (props) => {
             return (
                 <RoleNavItem link={d.path}
                              key={d.path}
+                             icon={d.icon}
                              onClick={handleNavItemClick}
                              isActive={activeLink === d.path}
                              name={d.name}/>

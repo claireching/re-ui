@@ -2,6 +2,7 @@
 
 .dropdown-container {
     position: relative;
+    cursor: pointer;
 
     &.isHover {
         display: inline-block;
@@ -9,18 +10,32 @@
 
     ._body {
         position: absolute;
-        z-index: 15;
+        z-index: -1;
         border: 1px solid $color-border;
         margin-top: 1px;
         background: #fff;
+        opacity: 0;
     }
-}
 
-.toggle-container {
-    cursor: text;
+    &.top {
+        ._body {
+            margin-top: 0;
+            margin-bottom: 2px;
+            bottom: 100%
+        }
+    }
+
+    &.stick-right {
+        ._body {
+            right: 0
+        }
+    }
 
     &._active {
-        outline: -webkit-focus-ring-color auto 1px;
+        ._body {
+            opacity: 1;
+            z-index: 15;
+        }
     }
 }
 

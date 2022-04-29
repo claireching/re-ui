@@ -1,20 +1,39 @@
-import "./basePage.css";
+import "./basePage.scss";
 import React from "react";
 import Check from "../../components/checkif";
-import {Container} from "../../../re-ui";
+import LayoutContainer from "../../../re-ui/layout/layoutContainer";
 
 const BasePage2 = (props) => {
-    const {isLoading, title, className = ""} = props;
+    const {isLoading, children, title, className = ""} = props;
+
+    const bodyNode = [];
+    let baseButtonNode;
+    React.Children.forEach(children, (child, i) => {
+        if (child?.type?.displayName === "BasePageButtons") {
+            baseButtonNode = child;
+        } else {
+            bodyNode.push(child);
+        }
+    });
+
+    let headNode;
+    if (title || baseButtonNode) {
+        headNode = (
+            <LayoutContainer>
+                <div className={"_header"}>
+                    <Check if={title}>
+                        <h1 className="page-title">{title}</h1>
+                    </Check>
+                    {baseButtonNode}
+                </div>
+            </LayoutContainer>
+        );
+    }
 
     return (
         <div className={`base-page ${className}`}>
-            <Check if={title}>
-                <Container>
-                    <h1 className="page-title">{title}</h1>
-                </Container>
-
-            </Check>
-            {props.children}
+            {headNode}
+            {bodyNode}
         </div>
     );
 };

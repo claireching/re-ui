@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Icon from "../../../../../re-ui/icon/icon";
 
 const RoleNavItem = (props) => {
     const {activeLink, name, onClick, link, permitted, icon, isActive} = props || {};
@@ -8,7 +9,7 @@ const RoleNavItem = (props) => {
     return (
         <React.Fragment>
             <a className={isActive ? 'nav-active' : ''} onClick={() => onClick(link)}>
-                <i className={`nav-icon ${icon}`} title={name}/> <span className="side-bar-nav-name">{name}</span>
+                <Icon icon={icon}/> <span className="side-bar-nav-name">{name}</span>
             </a>
         </React.Fragment>
     );

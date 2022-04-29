@@ -35,6 +35,16 @@
     &:hover {
         background-color: $color-primary-hover;
     }
+
+    &.outline {
+        color: $color-primary;
+        border-color: $color-primary;
+        background-color: transparent;
+
+        &:hover {
+
+        }
+    }
 }
 
 .btn-secondary {

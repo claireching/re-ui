@@ -1,25 +1,38 @@
 import "./dropdown.scss";
 import React, {useState, useEffect, useRef} from "react";
 import Button from "../button/button";
-import Floater from "../floater";
 import {useOutsideClicker} from "../hooks";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
+// 默认align left，如检测到dropdown out of screen，自动align right
 const Dropdown = (props) => {
-    const {label, toggle, isVertical, color, title, isHover, onDropdownShowed} = props;
-    const [show, setShow] = useState(false);
+    const {toggle, color, isHover, onToggle, isOpen, dropdownPosition} = props;
+    const [isOverScreenX, setIsOverScreenX] = useState(false);
     const childrenRef = useRef(null);
     const buttonRef = useRef(null);
 
+    useEffect(() => {
+        if (childrenRef?.current) {
+            const ele = buttonRef?.current.getBoundingClientRect();
+            const {width, x} = ele || {};
+
+            const bodyEle = childrenRef?.current?.getBoundingClientRect();
+            const buff = 0;
+            if (x + width + bodyEle?.width >= window.innerWidth + buff) {
+                setIsOverScreenX(true);
+            }
+        }
+    }, [childrenRef?.current]);
+
     const collapseDropdown = () => {
-        setShow(false);
+        onToggle && onToggle(false);
     };
 
     useOutsideClicker(childrenRef, collapseDropdown, buttonRef);
 
-    const dropdownClick = (e) => {
-        setShow(d => !d);
-        typeof onDropdownShowed === "function" && onDropdownShowed();
+    const dropdownClick = () => {
+        onToggle && onToggle(!isOpen);
     };
 
     let toggleNode;
@@ -29,23 +42,29 @@ const Dropdown = (props) => {
                 {toggle}
             </Button>
         );
-    } else {
+    } else if (toggle) {
         toggleNode = (
-            <div ref={buttonRef} className={clsx("toggle-container", show && "_active")} onClick={dropdownClick}
-                 color={color}>
+            <div ref={buttonRef} onClick={dropdownClick} color={color}>
                 {toggle}
             </div>
         );
     }
 
     return (
-        <div className={clsx(`dropdown-container`, isHover && "ishover")}
-             onMouseEnter={isHover && dropdownClick}
-             onMouseLeave={isHover && collapseDropdown}>
+        <div
+            className={clsx(`dropdown-container`, isHover && "ishover", isOpen && "_active", isOverScreenX && "stick-right", dropdownPosition)}
+            onMouseEnter={isHover && dropdownClick}
+            onMouseLeave={isHover && collapseDropdown}>
             {toggleNode}
-            {show && <div ref={childrenRef} className={"_body"}>{props.children}</div>}
+            <div ref={childrenRef} className={clsx("_body")}>{props.children}</div>
         </div>
     );
+};
+
+Dropdown.propTypes = {
+    toggle: PropTypes.any.isRequired,
+    onToggle: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool.isRequired,
 };
 
 export default Dropdown;
