@@ -1,14 +1,15 @@
 import React from "react";
 import BasePage from "./basePage/basePage";
 import BasePageContent from "./basePage/basePageContent";
-import {Button, ButtonGroup, Col, Container, Input, Row, Section, Select, Table} from "../../re-ui";
+import {Badge, Button, ButtonGroup, Col, Container, Dropdown, Input, Row, Section, Select, Table} from "../../re-ui";
 import List from "../../re-ui/list/list";
 import ListItem from "../../re-ui/list/listItem";
 import LayoutContainer from "../../re-ui/layout/layoutContainer";
 import BasePageButtons from "./basePage/basePageButtons";
 import Icon from "../../re-ui/icon/icon";
+import {chooseRandom} from "../helper/utils";
 
-const DATA_LENGTH = 15;
+const DATA_LENGTH = 10;
 const DATA_SAMPLE = {
     id: 1,
     name: "John",
@@ -17,7 +18,8 @@ const DATA_SAMPLE = {
     height: 170,
     weight: 70,
     IQ: 100,
-    income: 6000
+    income: 6000,
+    status: "done"
 };
 const generateData = () => {
     const DATA = [];
@@ -38,15 +40,18 @@ const generateData = () => {
                 case "weight":
                 case "IQ":
                 case "income":
-                    let add = [1, 2, 3, 4, 5];
+                    let add = [10, 20, 3, 4, 5];
                     if (k === "income") {
-                        add = [1000, 200, 300, 400, 500];
+                        add = [10000, 200, 300, 400, 500];
                     }
-                    const randomIndex = Math.floor(Math.random() * add.length);
-                    toInsert[k] = value + add[randomIndex];
+                    toInsert[k] = chooseRandom(add);
                     break;
                 case "country":
                     toInsert.country = "MY";
+                    break;
+                case "status":
+                    let statusArr = ["done", "processing", "open"];
+                    toInsert[k] = chooseRandom(statusArr);
             }
             if (headers?.length < Object.keys(DATA_SAMPLE)?.length) {
                 headers.push(k);
@@ -65,13 +70,13 @@ const HomePage = () => {
             <BasePageButtons>
                 <ButtonGroup>
                     <Button outline>Config</Button>
-                    <Button outline>Create</Button>
+                    <Button outline><Icon icon={"icon-add-select"} fontSize={18}
+                                          style={{marginRight: 5}}/>Create</Button>
                 </ButtonGroup>
             </BasePageButtons>
 
             <BasePageContent withPadding={false}>
                 <LayoutContainer>
-
                     <Row style={{justifyContent: "flex-end", marginBottom: 20}}>
                         <Col grow>
                             <Row className={"table-filter"}>
@@ -82,16 +87,16 @@ const HomePage = () => {
                                     <Select options={[{label: "test1",}, {label: "test2"}]}/>
                                 </Col>
                                 <Col md={3} lg={2}>
-                                    <Input/>
+                                    <Input placeholder={"Name"}/>
                                 </Col>
                                 <Col md={3} lg={2}>
-                                    <Input/>
+                                    <Input placeholder={"Age"}/>
                                 </Col>
                                 <Col md={3} lg={2}>
-                                    <Input/>
+                                    <Input placeholder={"Country"}/>
                                 </Col>
                                 <Col md={3} lg={2}>
-                                    <Input/>
+                                    <Input placeholder={"Number"}/>
                                 </Col>
                             </Row>
                         </Col>
@@ -111,35 +116,39 @@ const HomePage = () => {
                                     );
                                 })
                             }
+                            <th/>
                         </tr>
                         </thead>
                         <tbody>
                         {
                             list?.data?.map(o => {
-                                const tdNode = Object.keys(o).map(k => <td key={k}>{o[k]}</td>);
+                                const tdNode = Object.keys(o).map(k => {
+                                    let value = o[k];
+
+                                    if (k.toLowerCase() === "status") {
+                                        value = <Badge>{value}</Badge>;
+                                    }
+                                    if (k.toLowerCase() === "income") {
+                                        value = <>
+                                            <div>{value}</div>
+                                            <div style={{fontSize: 10, color: "#a8a8a8"}}>MYR</div>
+                                        </>;
+                                    }
+                                    return <td key={k}>{value}</td>;
+                                });
                                 return (
                                     <tr key={o.id}>
                                         {tdNode}
+                                        <td>
+                                            <Select toggle={<Icon icon={"icon-gengduo"} fontSize={20}/>}
+                                                    options={[{label: "Edit"}, {label: "Delete"}]}/>
+                                        </td>
                                     </tr>
                                 );
                             })
                         }
                         </tbody>
                     </Table>
-                    {/*<Section>*/}
-                    {/*    <h2>List</h2>*/}
-                    {/*    <List>*/}
-                    {/*        <ListItem>*/}
-                    {/*            Test A*/}
-                    {/*        </ListItem>*/}
-                    {/*        <ListItem>*/}
-                    {/*            Test B*/}
-                    {/*        </ListItem>*/}
-                    {/*        <ListItem>*/}
-                    {/*            Test C*/}
-                    {/*        </ListItem>*/}
-                    {/*    </List>*/}
-                    {/*</Section>*/}
                 </LayoutContainer>
             </BasePageContent>
         </BasePage>

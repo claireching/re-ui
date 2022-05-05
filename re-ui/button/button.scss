@@ -17,14 +17,20 @@
     border-radius: 0.25rem;
     overflow: hidden;
     position: relative;
+    padding: 0;
 
     ._inner {
-        padding: $padding-btn-vertical-md 0.8rem
+        padding: $padding-btn-vertical-md 0.8rem;
+        min-height: 30px;
+        align-items: center;
+        display: flex;
     }
 
     ._children {
         position: relative;
         z-index: 2;
+        display: flex;
+        align-items: center;
     }
 }
 

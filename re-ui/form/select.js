@@ -3,7 +3,7 @@ import Dropdown from "../dropdown/dropdown";
 import clsx from "clsx";
 import "./select.scss";
 
-const DEFAULT_LABEL = "Please Select";
+const DEFAULT_LABEL = "Select";
 const Select = ({
                     options = [],
                     label,
@@ -13,7 +13,8 @@ const Select = ({
                     value = "",
                     defaultSelected,
                     dropdownPosition,
-                    showDefault = true
+                    showSelectText = false,
+                    toggle
                 }) => {
     const [toggleWidth, setToggleWidth] = useState();
     const [selected, setSelected] = useState();
@@ -55,14 +56,14 @@ const Select = ({
     const containerDomWidth = containerDom?.width;
     const bodyWidth = containerDomWidth > toggleWidth ? containerDomWidth : toggleWidth;
 
-    const toggleInput = <div className={clsx("_toggle _input select-input", isOpen && "_active")}
+    const toggleInput = toggle || <div className={clsx("_toggle _input select-input", isOpen && "_active")}
                              ref={toggleRef}>{selected?.label}</div>;
     return (
         <div className={"form-container select-container"} ref={containerRef}>
             {label && <label htmlFor={id}>{label}</label>}
             <Dropdown toggle={toggleInput} isOpen={isOpen} onToggle={setIsOpen} dropdownPosition={dropdownPosition}>
                 <div className={"_options"} style={{width: bodyWidth}}>
-                    {showDefault &&
+                    {showSelectText &&
                     <div className={"_item"} onClick={() => handleChange({label: DEFAULT_LABEL, value: null})}>
                         {DEFAULT_LABEL}
                     </div>}

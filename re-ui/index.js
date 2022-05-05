@@ -1,5 +1,6 @@
 import "./baseStyle.scss";
 import "./form/form.scss";
+export Badge from "./badge/badge";
 export Button from "./button/button";
 export ButtonGroup from "./buttonGroup/buttonGroup";
 export Container from "./grid/container";

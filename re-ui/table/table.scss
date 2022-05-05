@@ -9,11 +9,22 @@
     //border-width: 0 1px 1px 1px;
 
     thead {
-        background-color: $color-table-header;
+        //background-color: $color-table-header;
     }
 
+    tr {
+        border-bottom: 0.0625rem solid $color-border-light;
+    }
+
+    tbody {
+        tr:last-child {
+            border-bottom: 0;
+        }
+    }
+
+
     td, th {
-        border-top: 0.0625rem solid $color-border-light;
+        //border-bottom: 0.0625rem solid $color-border-light;
         padding: 0.9em 1rem;
         text-align: left;
         white-space: nowrap;
@@ -48,7 +59,9 @@
             justify-content: center;
             -webkit-box-align: center;
             align-items: center;
-            border-radius: 8px;
+            border-radius: 4px;
+            padding: 0 10px;
+            border: 1px solid $color-border;
             outline: 0;
             cursor: pointer;
             user-select: none;
@@ -72,15 +85,15 @@
 
 
         .previous {
-            margin-right: 8px;
+            //margin-right: 8px;
         }
 
         .next {
-            margin-left: 8px;
+            //margin-left: 8px;
         }
     }
 
-    .limit-container {
+    ._select {
         display: flex;
         align-items: center;
     }
