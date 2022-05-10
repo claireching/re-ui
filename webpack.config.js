@@ -5,17 +5,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const BUILD_DIR = path.resolve(__dirname, "dist");
 const SRC_DIR = path.resolve(__dirname, "src");
-const APP_DIR = path.resolve(__dirname, "example");
 
 module.exports = env => {
-    const environment = env || "";
-    console.log('Running In Environment:', environment);
-
     return {
-        entry: APP_DIR + "/index.js",
+        entry: SRC_DIR + "/index.js",
         output: {
             path: BUILD_DIR,
-            filename: "js/main.[fullhash:6].js",
+            filename: "bundle.js",
             publicPath: "/",
         },
         module: {
@@ -57,12 +53,6 @@ module.exports = env => {
             extensions: [".js", ".json", ".jsx"]
         },
         plugins: [
-            new HtmlWebPackPlugin({
-                template: "example/html/index.html",
-                filename: "index.html",
-                chunksSortMode: 'none',
-                // favicon: "./assets/icons/favicon.png"
-            }),
             new MiniCssExtractPlugin({
                 filename: "[name].[chunkhash:6].css",
                 chunkFilename: "[id].[chunkhash:6].css",
@@ -73,9 +63,5 @@ module.exports = env => {
                 },
             }),
         ],
-        devServer: {
-            historyApiFallback: true,
-            hot: true,
-        },
     };
 };

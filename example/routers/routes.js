@@ -1,5 +1,5 @@
 import React from "react";
-import HomePage from "../pages/homePage";
+import HomePage from "../pages/homePage/homePage";
 import ButtonPage from "../pages/buttonPage";
 import ModalPage from "../pages/modalPage";
 import DropdownPage from "../pages/dropdownPage";

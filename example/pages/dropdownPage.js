@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Col, Container, Dropdown, Row} from "../../re-ui";
+import {Button, Col, Container, Dropdown, Row} from "../../src";
 import BasePage from "./basePage/basePage";
 import BasePageContent from "./basePage/basePageContent";
 
