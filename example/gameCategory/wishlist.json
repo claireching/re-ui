@@ -1,0 +1,343 @@
+{
+  "237870": {
+    "name": "Planet Explorers",
+    "capsule": "https://cdn.akamai.steamstatic.com/steam/apps/237870/header_292x136.jpg?t=1596510667",
+    "review_score": 5,
+    "review_desc": "Mixed",
+    "reviews_total": "6,607",
+    "reviews_percent": 63,
+    "release_date": "1478613455",
+    "release_string": "8 Nov, 2016",
+    "platform_icons": "<span class=\"platform_img win\"></span><span class=\"platform_img mac\"></span><span class=\"platform_img linux\"></span>",
+    "subs": [
+    ],
+    "type": "Game",
+    "screenshots": [
+      "ss_650e9bd4ae871e455dfe84d258854784970c0a3c.jpg",
+      "ss_e08e5df30edb887359f60c935f8b4baaa002578b.jpg",
+      "ss_58293e8c65623f67957c480f36748c102883d740.jpg",
+      "ss_5260d8fdbbb524d3cc4c024f4344141f030e9e52.jpg"
+    ],
+    "review_css": "mixed",
+    "priority": 0,
+    "added": 1411992669,
+    "background": "https://cdn.akamai.steamstatic.com/steam/apps/237870/page_bg_generated_v6b.jpg?t=1596510667",
+    "rank": 1000,
+    "tags": [
+      "Open World Survival Craft",
+      "Sandbox",
+      "Open World",
+      "Survival",
+      "Adventure"
+    ],
+    "is_free_game": true,
+    "deck_compat": 0,
+    "win": 1,
+    "mac": 1,
+    "linux": 1,
+    "free": 1
+  },
+  "654690": {
+    "name": "Bermuda - Lost Survival",
+    "capsule": "https://cdn.akamai.steamstatic.com/steam/apps/654690/header_292x136.jpg?t=1601124208",
+    "review_score": 5,
+    "review_desc": "Mixed",
+    "reviews_total": "456",
+    "reviews_percent": 58,
+    "release_date": "1601124213",
+    "release_string": "26 Sep, 2020",
+    "platform_icons": "<span class=\"platform_img win\"></span>",
+    "subs": [
+      {
+        "id": 184564,
+        "discount_block": "<div class=\"discount_block discount_block_large\" data-price-final=\"1175\"><div class=\"discount_pct\">-50%</div><div class=\"discount_prices\"><div class=\"discount_original_price\">RM23.50</div><div class=\"discount_final_price\">RM11.75</div></div></div>",
+        "discount_pct": 50,
+        "price": 1175
+      }
+    ],
+    "type": "Game",
+    "screenshots": [
+      "ss_17a9f3f30ea4c81291fcab2a8717da4e28df6c32.jpg",
+      "ss_bc78b246a9be048ad949142cdd6f9204fe3e2144.jpg",
+      "ss_c28b4fa2f6498a15f7ad9220cddf21fc9d22e691.jpg",
+      "ss_56b6ea9c364970322b7933fdb26e3fd22734a5ee.jpg"
+    ],
+    "review_css": "mixed",
+    "priority": 0,
+    "added": 1606183711,
+    "background": "https://cdn.akamai.steamstatic.com/steam/apps/237870/page_bg_generated_v6b.jpg?t=1596510667",
+    "rank": 991,
+    "tags": [
+      "Open World Survival Craft",
+      "Sandbox",
+      "Base Building",
+      "Underwater",
+      "Survival"
+    ],
+    "is_free_game": false,
+    "deck_compat": 0,
+    "win": 1
+  },
+  "773790": {
+    "name": "Ostriv",
+    "capsule": "https://cdn.akamai.steamstatic.com/steam/apps/773790/header_292x136.jpg?t=1650989448",
+    "review_score": 8,
+    "review_desc": "Very Positive",
+    "reviews_total": "2,515",
+    "reviews_percent": 92,
+    "release_date": "1584617863",
+    "release_string": "19 Mar, 2020",
+    "platform_icons": "<span class=\"platform_img win\"></span>",
+    "subs": [
+      {
+        "id": 231822,
+        "discount_block": "<div class=\"discount_block discount_block_large no_discount\" data-price-final=\"4400\"><div class=\"discount_prices\"><div class=\"discount_final_price\">RM44.00</div></div></div>",
+        "discount_pct": 0,
+        "price": 4400
+      }
+    ],
+    "type": "Game",
+    "screenshots": [
+      "ss_e8c1720dcf03313646b8e702c08638b8c36d24f5.jpg",
+      "ss_6f65027fb3282fe0c26bb40689d824aeac5b0457.jpg",
+      "ss_25e9b4db25a7722762c95266a4017db8dab17c3e.jpg",
+      "ss_e9561171362eaf6da0db79949c28498af42bfd42.jpg"
+    ],
+    "review_css": "positive",
+    "priority": 0,
+    "added": 1603875340,
+    "background": "https://cdn.akamai.steamstatic.com/steam/apps/237870/page_bg_generated_v6b.jpg?t=1596510667",
+    "rank": 974,
+    "tags": [
+      "Simulation",
+      "Strategy",
+      "Management",
+      "City Builder",
+      "Economy"
+    ],
+    "is_free_game": false,
+    "deck_compat": 0,
+    "early_access": 1,
+    "win": 1
+  },
+  "897730": {
+    "name": "Among Trees",
+    "capsule": "https://cdn.akamai.steamstatic.com/steam/apps/897730/header_292x136.jpg?t=1636537260",
+    "review_score": 6,
+    "review_desc": "Mostly Positive",
+    "reviews_total": "1,146",
+    "reviews_percent": 71,
+    "release_date": "1636537264",
+    "release_string": "10 Nov, 2021",
+    "platform_icons": "<span class=\"platform_img win\"></span>",
+    "subs": [
+      {
+        "id": 287092,
+        "discount_block": "<div class=\"discount_block discount_block_large\" data-price-final=\"1920\"><div class=\"discount_pct\">-40%</div><div class=\"discount_prices\"><div class=\"discount_original_price\">RM32.00</div><div class=\"discount_final_price\">RM19.20</div></div></div>",
+        "discount_pct": 40,
+        "price": 1920
+      }
+    ],
+    "type": "Game",
+    "screenshots": [
+      "ss_3cfadb8900c90dee1903cc39e636d374c164f9fd.jpg",
+      "ss_e26b65a20ce2fce2aec041fa29aab01220f2486c.jpg",
+      "ss_785672c67574ca06d219386e920f9cbc3cc0cf62.jpg",
+      "ss_7aaa20cdadabb0f3b3e5144864d98214c10368ce.jpg"
+    ],
+    "review_css": "positive",
+    "priority": 0,
+    "added": 1603875816,
+    "background": "https://cdn.akamai.steamstatic.com/steam/apps/237870/page_bg_generated_v6b.jpg?t=1596510667",
+    "rank": 936,
+    "tags": [
+      "Open World Survival Craft",
+      "Survival",
+      "Exploration",
+      "Adventure",
+      "Open World"
+    ],
+    "is_free_game": false,
+    "deck_compat": "2",
+    "win": 1
+  },
+  "907650": {
+    "name": "Stronghold: Warlords",
+    "capsule": "https://cdn.akamai.steamstatic.com/steam/apps/907650/header_292x136.jpg?t=1650965512",
+    "review_score": 5,
+    "review_desc": "Mixed",
+    "reviews_total": "2,736",
+    "reviews_percent": 64,
+    "release_date": "1615312380",
+    "release_string": "10 Mar, 2021",
+    "platform_icons": "<span class=\"platform_img win\"></span>",
+    "subs": [
+      {
+        "id": 290670,
+        "discount_block": "<div class=\"discount_block discount_block_large\" data-price-final=\"2225\"><div class=\"discount_pct\">-75%</div><div class=\"discount_prices\"><div class=\"discount_original_price\">RM89.00</div><div class=\"discount_final_price\">RM22.25</div></div></div>",
+        "discount_pct": 75,
+        "price": 2225
+      },
+      {
+        "id": 515547,
+        "discount_block": "<div class=\"discount_block discount_block_large\" data-price-final=\"2875\"><div class=\"discount_pct\">-75%</div><div class=\"discount_prices\"><div class=\"discount_original_price\">RM115.00</div><div class=\"discount_final_price\">RM28.75</div></div></div>",
+        "discount_pct": 75,
+        "price": 2875
+      },
+      {
+        "id": 675219,
+        "discount_block": "<div class=\"discount_block discount_block_large\" data-price-final=\"6950\"><div class=\"discount_pct\">-50%</div><div class=\"discount_prices\"><div class=\"discount_original_price\">RM139.00</div><div class=\"discount_final_price\">RM69.50</div></div></div>",
+        "discount_pct": 50,
+        "price": 6950
+      }
+    ],
+    "type": "Game",
+    "screenshots": [
+      "ss_8283f3372d779d8a14a8dfc23c06ee25069e72f9.jpg",
+      "ss_4f5c695ac3546825573c79c236348bbdf9e50645.jpg",
+      "ss_890387bd2b4840c18943af6a5b17fefc2cac3cd8.jpg",
+      "ss_6e5c7c40bf1d1bed9b475b436a8fcf392049b674.jpg"
+    ],
+    "review_css": "mixed",
+    "priority": 0,
+    "added": 1603875409,
+    "background": "https://cdn.akamai.steamstatic.com/steam/apps/237870/page_bg_generated_v6b.jpg?t=1596510667",
+    "rank": 918,
+    "tags": [
+      "City Builder",
+      "Real Time Tactics",
+      "Colony Sim",
+      "Building",
+      "Sandbox"
+    ],
+    "is_free_game": false,
+    "deck_compat": 0,
+    "win": 1
+  },
+  "978520": {
+    "name": "Legend of Keepers: Career of a Dungeon Manager",
+    "capsule": "https://cdn.akamai.steamstatic.com/steam/apps/978520/header_292x136.jpg?t=1655730269",
+    "review_score": 8,
+    "review_desc": "Very Positive",
+    "reviews_total": "3,052",
+    "reviews_percent": 82,
+    "release_date": "1619714393",
+    "release_string": "30 Apr, 2021",
+    "platform_icons": "<span class=\"platform_img win\"></span><span class=\"platform_img mac\"></span><span class=\"platform_img linux\"></span>",
+    "subs": [
+      {
+        "id": 321533,
+        "discount_block": "<div class=\"discount_block discount_block_large\" data-price-final=\"1560\"><div class=\"discount_pct\">-60%</div><div class=\"discount_prices\"><div class=\"discount_original_price\">RM39.00</div><div class=\"discount_final_price\">RM15.60</div></div></div>",
+        "discount_pct": 60,
+        "price": 1560
+      }
+    ],
+    "type": "Game",
+    "screenshots": [
+      "ss_19bcf227c3e14dc5bb0c011f97ef0e056956f658.jpg",
+      "ss_bc9d4ccc20863b2289cb2e8456427182190e8980.jpg",
+      "ss_5b2d1f5057b4625b29b6a1271ee1eb02580651d5.jpg",
+      "ss_617fe9a42e91af7d4a128d7384fce8076f0210d7.jpg"
+    ],
+    "review_css": "positive",
+    "priority": 0,
+    "added": 1604020193,
+    "background": "https://cdn.akamai.steamstatic.com/steam/apps/237870/page_bg_generated_v6b.jpg?t=1596510667",
+    "rank": 942,
+    "tags": [
+      "Turn-Based Combat",
+      "Dungeon Crawler",
+      "Strategy",
+      "Replay Value",
+      "Difficult"
+    ],
+    "is_free_game": false,
+    "deck_compat": 0,
+    "win": 1,
+    "mac": 1,
+    "linux": 1
+  },
+  "978780": {
+    "name": "STORY OF SEASONS: Friends of Mineral Town",
+    "capsule": "https://cdn.akamai.steamstatic.com/steam/apps/978780/header_292x136.jpg?t=1630535142",
+    "review_score": 8,
+    "review_desc": "Very Positive",
+    "reviews_total": "3,599",
+    "reviews_percent": 95,
+    "release_date": "1594746240",
+    "release_string": "15 Jul, 2020",
+    "platform_icons": "<span class=\"platform_img win\"></span>",
+    "subs": [
+      {
+        "id": 481305,
+        "discount_block": "<div class=\"discount_block discount_block_large\" data-price-final=\"3900\"><div class=\"discount_pct\">-40%</div><div class=\"discount_prices\"><div class=\"discount_original_price\">RM65.00</div><div class=\"discount_final_price\">RM39.00</div></div></div>",
+        "discount_pct": 40,
+        "price": 3900
+      }
+    ],
+    "type": "Game",
+    "screenshots": [
+      "ss_ccc9ae5cf9f9e303399137a41dca952190b239d8.jpg",
+      "ss_35056591d0b87b29517905b760fb20942b35a723.jpg",
+      "ss_13a2f34f57b24077e88cd90e49d5e9c89ea3f705.jpg",
+      "ss_e73451ea174eee988338ef01a21a9eef8c995d82.jpg"
+    ],
+    "review_css": "positive",
+    "priority": 0,
+    "added": 1604907017,
+    "background": "https://cdn.akamai.steamstatic.com/steam/apps/237870/page_bg_generated_v6b.jpg?t=1596510667",
+    "rank": 927,
+    "tags": [
+      "Simulation",
+      "Farming Sim",
+      "Casual",
+      "RPG",
+      "Dating Sim"
+    ],
+    "is_free_game": false,
+    "deck_compat": "1",
+    "win": 1
+  },
+  "1054510": {
+    "name": "Survivalist: Invisible Strain",
+    "capsule": "https://cdn.akamai.steamstatic.com/steam/apps/1054510/header_292x136.jpg?t=1656329779",
+    "review_score": 8,
+    "review_desc": "Very Positive",
+    "reviews_total": "2,099",
+    "reviews_percent": 89,
+    "release_date": "1591009203",
+    "release_string": "1 Jun, 2020",
+    "platform_icons": "<span class=\"platform_img win\"></span>",
+    "subs": [
+      {
+        "id": 351933,
+        "discount_block": "<div class=\"discount_block discount_block_large\" data-price-final=\"1225\"><div class=\"discount_pct\">-30%</div><div class=\"discount_prices\"><div class=\"discount_original_price\">RM17.50</div><div class=\"discount_final_price\">RM12.25</div></div></div>",
+        "discount_pct": 30,
+        "price": 1225
+      }
+    ],
+    "type": "Game",
+    "screenshots": [
+      "ss_4cb415bc75ea53ff272bb1a6c46ee98ea6b31899.jpg",
+      "ss_21f535f6939963726de1bd793ae77898af6df459.jpg",
+      "ss_eee511a776d30d86163bdba03e127443107a00e3.jpg",
+      "ss_e0ccb45a050275d0443240fc827fc3ebaa3f567d.jpg"
+    ],
+    "review_css": "positive",
+    "priority": 0,
+    "added": 1603875033,
+    "background": "https://cdn.akamai.steamstatic.com/steam/apps/237870/page_bg_generated_v6b.jpg?t=1596510667",
+    "rank": 985,
+    "tags": [
+      "RPG",
+      "Zombies",
+      "Strategy",
+      "Survival",
+      "Action"
+    ],
+    "is_free_game": false,
+    "deck_compat": 0,
+    "early_access": 1,
+    "win": 1
+  }
+}

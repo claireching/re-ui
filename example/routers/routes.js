@@ -4,6 +4,7 @@ import ButtonPage from "../pages/buttonPage";
 import ModalPage from "../pages/modalPage";
 import DropdownPage from "../pages/dropdownPage";
 import GridPage from "../pages/gridPage";
+import CategoryHomePage from "../pages/categoryHome/categoryHomePage";
 
 const routes = [
     {
@@ -11,6 +12,11 @@ const routes = [
         name: "Home",
         icon: "icon-shouye",
         component: <HomePage/>
+    },    {
+        path: "/category",
+        name: "Category",
+        icon: "icon-shouye",
+        component: <CategoryHomePage/>
     },
     {
         path: "/button",

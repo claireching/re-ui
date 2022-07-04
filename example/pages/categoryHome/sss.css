@@ -1,0 +1,28 @@
+.list1 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+
+.list1 img {
+    width: 50px;
+}
+
+.list1 ._body {
+    justify-content: space-between;
+    flex: 1;
+}
+
+.list1 ._title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.list1 ._desc {
+    color: #999;
+    margin-bottom: 3px;
+}
+
+.list1 ._price {
+    font-size: 1.1em;
+}
