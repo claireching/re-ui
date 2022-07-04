@@ -1,8 +1,8 @@
 import React from "react";
-import {Button, ButtonGroup, Col, Container, Row} from "../../src";
+import {Button, ButtonGroup, Col, Container, Row} from "../../src/components";
 import BasePage from "./basePage/basePage";
 import BasePageContent from "./basePage/basePageContent";
-import Image from "../../src/image/image";
+import Image from "../../src/components/image/image";
 
 const GridPage = () => {
     return (

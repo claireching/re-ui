@@ -11,8 +11,11 @@ module.exports = env => {
         entry: SRC_DIR + "/index.js",
         output: {
             path: BUILD_DIR,
-            filename: "bundle.js",
+            filename: "re-ui-web.js",
             publicPath: "/",
+            library: "re-ui-web",   // Important
+            libraryTarget: "umd",   // Important
+            umdNamedDefine: true   // Important
         },
         module: {
             rules: [

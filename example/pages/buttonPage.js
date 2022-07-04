@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, ButtonGroup, Section} from "../../src";
+import {Button, ButtonGroup, Section} from "../../src/components";
 import BasePage from "./basePage/basePage";
 import BasePageContent from "./basePage/basePageContent";
 

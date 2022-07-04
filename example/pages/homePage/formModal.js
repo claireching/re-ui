@@ -1,5 +1,5 @@
 import React from "react";
-import {Input, Modal} from "../../../src";
+import {Input, Modal} from "../../../src/components";
 
 const FormModal = ({isOpen, onConfirm, onClose}) => {
     return (

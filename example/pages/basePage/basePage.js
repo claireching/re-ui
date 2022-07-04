@@ -1,7 +1,7 @@
 import "./basePage.scss";
 import React from "react";
 import Check from "../../components/checkif";
-import LayoutContainer from "../../../src/layout/layoutContainer";
+import LayoutContainer from "../../../src/components/layout/layoutContainer";
 
 const BasePage2 = (props) => {
     const {isLoading, children, title, className = ""} = props;

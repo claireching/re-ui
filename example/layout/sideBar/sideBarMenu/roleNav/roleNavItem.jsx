@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Icon from "../../../../../src/icon/icon";
+import Icon from "../../../../../src/components/icon/icon";
 
 const RoleNavItem = (props) => {
     const {activeLink, name, onClick, link, permitted, icon, isActive} = props || {};

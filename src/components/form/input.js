@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 
 export const constInputType = {
     text: "text",
@@ -20,12 +21,13 @@ const Input = ({
                    placeholder,
                    name,
                    disabled = false,
+                   withQuantityControl,
                }) => {
     if (value === null) {
         value = "";
     }
 
-    if (placeholder === undefined) {
+    if (placeholder === undefined && !withQuantityControl) {
         placeholder = label || type;
     }
 
@@ -50,9 +52,15 @@ const Input = ({
                         id={id}/>;
 
     return (
-        <div className={"form-container input-container"}>
+        <div className={clsx("form-container input-container", withQuantityControl && "with-quantity-control")}>
             {label && <label htmlFor={id}>{label}</label>}
-            {node}
+            <div className={"input-body"}>
+                {node}
+                {
+                    withQuantityControl &&
+                    <div className={"input-quantity-control"}><span>+</span><span>-</span></div>
+                }
+            </div>
         </div>
     );
 };

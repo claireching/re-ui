@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import BasePage from "../basePage/basePage";
 import BasePageContent from "../basePage/basePageContent";
-import {Badge, Button, ButtonGroup, Col, Container, Dropdown, Input, Row, Section, Select, Table} from "../../../src";
-import List from "../../../src/list/list";
-import ListItem from "../../../src/list/listItem";
-import LayoutContainer from "../../../src/layout/layoutContainer";
+import {Badge, Button, ButtonGroup, Col, Container, Dropdown, Input, Row, Section, Select, Table} from "../../../src/components";
+import List from "../../../src/components/list/list";
+import ListItem from "../../../src/components/list/listItem";
+import LayoutContainer from "../../../src/components/layout/layoutContainer";
 import BasePageButtons from "../basePage/basePageButtons";
-import Icon from "../../../src/icon/icon";
+import Icon from "../../../src/components/icon/icon";
 import FormModal from "./formModal";
 import generateData from "./generateData";
 

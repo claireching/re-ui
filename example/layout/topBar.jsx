@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./topBar.css";
-import Navbar from "../../src/navbar/navbar";
-import Profile from "../../src/profile/profile";
+import Navbar from "../../src/components/navbar/navbar";
+import Profile from "../../src/components/profile/profile";
 
 const TopBar = ((props) => {
     const [modal, setModal] = useState("");

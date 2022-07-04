@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Button, Modal} from "../../src";
+import {Button, Modal} from "../../src/components";
 import BasePage from "./basePage/basePage";
 import BasePageContent from "./basePage/basePageContent";
 
