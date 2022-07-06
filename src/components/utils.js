@@ -5,6 +5,11 @@ export const getBtnColorClassName = (color) => {
     return validColors.includes(color) ? `btn-${color}` : "btn-primary";
 };
 
+const validSizes = ["lg", "sm"];
+export const getBtnSizeClassName = (size) => {
+    return validSizes.includes(size) ? `btn-${size}` : "";
+};
+
 export const getBgColorHighlightClassName = (color) => {
     return validColors.includes(color) ? `bg-${color}-highlight` : "bg-primary-highlight";
 };

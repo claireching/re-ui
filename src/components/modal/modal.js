@@ -55,9 +55,12 @@ const Modal = (props) => {
     }
 
     const bodyNode = [];
+    let headerNode;
     React.Children.forEach(children, (child, i) => {
         if (child?.type?.displayName === "K2ModalFooter") {
             footerNode = child;
+        } else if (child?.type?.displayName === "K2ModalHeader") {
+            headerNode = child;
         } else {
             bodyNode.push(child);
         }
@@ -70,9 +73,13 @@ const Modal = (props) => {
                     <div className="overlay" onClick={onOutsideClick}/>
                     <div className={clsx("k2modal", className, size, isCenter && "modal-center")}
                          style={width && {width: width}}>
-                        {title && <div className={"k2modal-header"}>
-                            <h4 className={"k2modal-title"}>{title}</h4>
-                        </div>}
+                        {headerNode}
+                        {
+                            title &&
+                            <div className={"k2modal-header"}>
+                                <h4 className={"k2modal-title"}>{title}</h4>
+                            </div>
+                        }
                         {bodyNode?.length ? <div className={"k2modal-body"}>
                             {bodyNode}
                         </div> : null}
@@ -84,6 +91,16 @@ const Modal = (props) => {
         </Portal>
     );
 };
+
+// for header that are not string
+export const K2ModalHeader = (props) => {
+    return (
+        <div className={"k2modal-header"}>
+            {props.children}
+        </div>
+    );
+};
+K2ModalHeader.displayName = "K2ModalHeader";
 
 
 export const K2ModalFooter = (props) => {
