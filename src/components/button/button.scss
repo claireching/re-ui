@@ -70,3 +70,26 @@
         background-color: $color-danger-hover;
     }
 }
+
+.btn-info {
+    color: #fff;
+    background-color: $color-info;
+
+    &:hover {
+        background-color: $color-info-hover;
+    }
+}
+
+.btn-sm ._inner {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+    min-height: initial;
+}
+
+.btn-lg ._inner {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+    min-height: initial;
+}

@@ -10,6 +10,7 @@
 
 .row {
     display: flex;
+    flex-wrap: wrap;
 
     margin-left: -$grid-padding;
     margin-right: -$grid-padding;
@@ -37,44 +38,26 @@
     //flex: 1 0 0%;
     padding-right: $grid-padding;
     padding-left: $grid-padding;
+    flex-grow: 1;
 
-    &.col-grow {
-        flex-grow: 1;
+    &[class*="col-md-"] {
+        flex-grow: initial;
     }
 
+    $columns: 12;
     @media (min-width: $grid-md) {
-        &.col-md-2 {
-            width: 16.66666667%;
-        }
-
-        &.col-md-3 {
-            width: 25%;
-        }
-
-        &.col-md-4 {
-            width: 33.33333333%;
-        }
-
-        &.col-md-8 {
-            width: 66.66666667%;
+        @for $i from 1 through $columns {
+            &.col-md-#{$i} {
+                width: (100% / (12 / $i));
+            }
         }
     }
 
     @media (min-width: $grid-lg) {
-        &.col-lg-2 {
-            width: 16.66666667%;
-        }
-
-        &.col-lg-3 {
-            width: 25%;
-        }
-
-        &.col-lg-4 {
-            width: 33.33333333%;
-        }
-
-        &.col-lg-8 {
-            width: 66.66666667%;
+        @for $i from 1 through $columns {
+            &.col-lg-#{$i} {
+                width: (100% / (12 / $i));
+            }
         }
     }
 }

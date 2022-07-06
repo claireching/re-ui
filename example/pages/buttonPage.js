@@ -12,6 +12,7 @@ const ButtonPage = () => {
                     <p>Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for
                         multiple sizes, states, and more.</p>
                 </Section>
+
                 <Section>
                     <h2>Examples</h2>
                     <p>Bootstrap includes several predefined button styles, each serving its own semantic purpose, with
@@ -19,9 +20,10 @@ const ButtonPage = () => {
                 </Section>
 
                 <ButtonGroup>
-                    <Button>Click Me</Button>
-                    <Button color={"secondary"}>Click Me</Button>
-                    <Button color={"danger"}>Click Me</Button>
+                    <Button>Primary</Button>
+                    <Button color={"secondary"}>Secondary</Button>
+                    <Button color={"danger"}>Danger</Button>
+                    <Button color={"info"}>Info</Button>
                 </ButtonGroup>
             </BasePageContent>
         </BasePage>

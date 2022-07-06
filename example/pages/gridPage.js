@@ -45,6 +45,8 @@ const GridPage = () => {
                                             for multiple sizes, states, and more.</p>
                                         <Button>View</Button>
                                     </Col>
+                                    <Col md={12}/>
+                                    <Col>test</Col>
                                 </Row>
 
                                 <h2>Two Column</h2>
@@ -75,6 +77,27 @@ const GridPage = () => {
                         <Col lg={4} style={{backgroundColor: "#eee", height: "100vh"}}>
 
                         </Col>
+                    </Row>
+                    <Row style={{textAlign: "center"}}>
+                        <Col>1</Col>
+                        <Col>2</Col>
+                        <Col>3</Col>
+                        <Col>4</Col>
+                        <Col>5</Col>
+                        <Col>6</Col>
+                        <Col>7</Col>
+                        <Col>8</Col>
+                        <Col>9</Col>
+                        <Col>10</Col>
+                        <Col>11</Col>
+                        <Col>12</Col>
+                        <Col>13</Col>
+                        <Col>14</Col>
+                    </Row>
+                    <Row>
+                        <Col md={8}>A</Col>
+                        <Col md={6}>B</Col>
+                        <Col md={6}>C</Col>
                     </Row>
                 </Container>
             </BasePageContent>
